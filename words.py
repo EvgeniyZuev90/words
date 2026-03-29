@@ -10,7 +10,24 @@ length_word = len(word)
 display_word = ['_'] * length_word
 print("Загаданное слово:", " ".join(display_word))
 
-lives = 5
+print("Выберите уровень сложности:")
+print("1 — Легкий (10 жизней)")
+print("2 — Средний (6 жизней)")
+print("3 — Хардкор (3 жизни)")
+
+choice = input("Введите номер уровня: ")
+
+if choice == '1':
+    lives = 10
+elif choice == '2':
+    lives = 6
+elif choice == '3':
+    lives = 3
+else:
+    print("Неверный ввод, по умолчанию выбрано 6 жизней.")
+    lives = 6
+
+    
 used_letters = []
 
 
